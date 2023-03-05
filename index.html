@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billionaire Diary</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.2/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/9542da8f98.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+
+    </header>
+
+    <main class="md:grid grid-cols-4 ">
+        <section class="w-auto bg-slate-900 px-8 pt-5 text-center">
+                <h1 class="text-3xl text-gray-400 text-center"> <span class="font-bold text-gray-200">BILLIONAIRE</span> <br>
+                DIARY</h1>
+                <button class="bg-gray-300 px-20 py-1 rounded-sm text-center mt-7"><span class="font-bold">Add a user</span> <br> (Randomly)</button>
+                <button class="bg-gray-300 px-16 rounded-sm font-bold py-4 mt-5 text-center">Double Money</button>
+                <button class="bg-gray-300 px-20 pr-16 py-1 rounded-sm mt-5 text-center"><span class="font-bold">Sort By Rank </span> <br> (Decending)</button>
+                <button class="bg-gray-300 px-8 rounded-sm font-bold py-4 mt-5 text-center">Calculate Entire Wealth</button>
+                <div class="text-center">
+                    <img class="w-48 mt-6 ml-5 text-center" src="./images/icons/divider.png" alt="">
+                </div>
+                <button onclick="lodeAllData()" class="bg-gray-300 px-10 pr-12 rounded-sm font-bold py-4 mt-5 text-center">Show All Billionaires </button>
+                <button class="bg-gray-300 px-12 pr-12  py-1 rounded-sm mt-5 text-center"><span class="font-bold">Richest by industry</span> <br>(Technology)</button>
+                <button class="bg-gray-300 px-9 pr-20 py-1 rounded-sm mt-5 mb-5 text-center"><span class="font-bold">Richest by states</span> <br>(Texas)</button>
+        </section>
+        <section class="col-span-3 ">
+            <nav>
+                <div class="navbar bg-zinc-50 py-5">
+                    <div class="flex-1">
+                        <div class="ml-5">
+                            <input type="text" placeholder="Search" class=" border-gray-600 outline-none bg-zinc-50  border-b-2" />
+                          </div>
+                    </div>
+                    <img class="w-12 cursor-pointer" src="/images/logo/logo1.png" />
+                  </div>
+            </nav>
+
+            <section class="bg-neutral-300 px-5">
+                <h1 class="text-2xl py-5 font-bold">Hello, User!</h1>
+
+                <div id="table" class="overflow-x-auto mt-5 hidden">
+                    <table class="table w-full ">
+                      <!-- head -->
+                      <thead>
+                        <tr class="">
+                          <th class="text-xs border-b-2 border-black bg-neutral-300">Person</th>
+                          <th class="text-xs border-b-2 border-black bg-neutral-300">Citizenship</th>
+                          <th class="text-xs border-b-2 border-black bg-neutral-300">Favorite Color</th>
+                          <th class="text-xs border-b-2 border-black bg-neutral-300">Rank</th>
+                          <th class="text-xs border-b-2 border-black bg-neutral-300">Wealth</th>
+                        </tr>
+                      </thead>
+                      <tbody id="table-body">
+
+                      </tbody>
+                    </table>
+                  </div>
+            </section>
+          <div id="loader" class="hidden mt-5">
+            <div class="flex items-center justify-center space-x-2">
+                <div
+                  class="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-current border-r-transparent align-[-0.125em] text-primary motion-reduce:animate-[spin_1.5s_linear_infinite]"
+                  role="status">
+                  <span
+                    class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+                    >Loading...</span
+                  >
+                </div>
+          </div>
+        </section>
+
+<div id="modal">
+  
+</div>
+    </main>
+
+    <script src="./js/index.js"></script>
+</body>
+</html>
